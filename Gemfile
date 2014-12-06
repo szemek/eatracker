@@ -12,6 +12,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
+gem 'haml-rails', '~> 0.6.0'
+gem 'quiet_assets', '~> 1.0.3'
 gem 'thin', '~> 1.6.3'
 
 group :production do
