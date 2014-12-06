@@ -1,0 +1,13 @@
+= form_for(meal) do |f|
+  = f.text_field :name, placeholder: 'posiłek'
+  = f.text_field :energy, placeholder: 'kalorie'
+  = f.date_field :consumed_at, name: 'meal[consumed_at][date]'
+  = f.time_field :consumed_at, name: 'meal[consumed_at][time]', value: meal.consumed_at.strftime('%H:%M')
+  = f.submit 'Dodaj'
+
+%table
+  - meals.each do |meal|
+    %tr
+      %td= meal.name
+      %td= meal.energy
+      %td= meal.consumed_at.strftime('%H:%M, %d %b %Y')
