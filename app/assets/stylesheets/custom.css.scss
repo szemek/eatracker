@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+* {
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+input[type="text"], input[type="time"], input[type="date"] {
+  border: none;
+  border-bottom: 3px dotted #ccc;
+  color: black;
+  height: 44px;
+  margin-left: 12px;
+  padding-left: 12px;
+  outline: none;
+  width: calc(100% - 24px);
+
+  &::-webkit-input-placeholder {
+    color: #ccc;
+  }
+
+  &:focus {
+    border-bottom: 3px dotted #49bf9d;
+  }
+}
+
+.button {
+  background-color: transparent;
+  border-radius: 6px;
+  border: 3px solid #49bf9d;
+  color: #49bf9d;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 400;
+  height: 50px;
+  line-height: 2.75em;
+  min-width: 10em;
+  padding: 0 1.5em;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
