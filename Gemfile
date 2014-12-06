@@ -13,8 +13,14 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 gem 'haml-rails', '~> 0.6.0'
+gem 'pry-rails', '~> 0.3.2'
 gem 'quiet_assets', '~> 1.0.3'
 gem 'thin', '~> 1.6.3'
+
+group :development, :test do
+  gem 'better_errors', '~> 2.0.0'
+  gem 'binding_of_caller', '~> 0.7.2'
+end
 
 group :production do
   gem 'rails_12factor'
