@@ -1,5 +1,5 @@
 = form_for(:meal, url: meals_path) do |f|
-  = f.text_field :name, placeholder: 'posiłek'
+  = f.text_field :name, placeholder: 'posiłek', required: true
   = f.text_field :energy, placeholder: 'kalorie'
   = f.date_field :consumed_at, name: 'meal[consumed_at][date]', value: meal.consumed_at.strftime('%Y-%m-%d')
   = f.time_field :consumed_at, name: 'meal[consumed_at][time]', value: meal.consumed_at.strftime('%H:%M')
