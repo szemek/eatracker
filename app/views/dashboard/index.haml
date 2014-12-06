@@ -1,13 +1,15 @@
 = form_for(:meal, url: meals_path) do |f|
-  = f.text_field :name, placeholder: 'posiłek', required: true
-  = f.text_field :energy, placeholder: 'kalorie'
-  = f.date_field :consumed_at, name: 'meal[consumed_at][date]', value: meal.consumed_at.strftime('%Y-%m-%d')
-  = f.time_field :consumed_at, name: 'meal[consumed_at][time]', value: meal.consumed_at.strftime('%H:%M')
-  = f.submit 'Dodaj'
-
-%table
-  - meals.each do |meal|
+  %table
     %tr
-      %td= meal.name
-      %td= meal.energy
-      %td= meal.consumed_at.strftime('%H:%M, %d %b %Y')
+      %th= f.text_field :name, placeholder: 'posiłek', required: true, autofocus: true
+      %th= f.text_field :energy, placeholder: 'kalorie'
+      %th= f.time_field :consumed_at, name: 'meal[consumed_at][time]', value: meal.consumed_at.strftime('%H:%M')
+      %th= f.date_field :consumed_at, name: 'meal[consumed_at][date]', value: meal.consumed_at.strftime('%Y-%m-%d')
+      %th= f.submit 'Dodaj', class: 'button'
+    - meals.each do |meal|
+      %tr
+        %td= meal.name
+        %td= meal.energy
+        %td= meal.consumed_at.strftime('%H:%M')
+        %td= meal.consumed_at.strftime('%d/%m/%Y')
+        %td
