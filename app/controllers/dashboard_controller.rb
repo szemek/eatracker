@@ -1,6 +1,6 @@
 class DashboardController < ApplicationController
   def index
-    meals = Meal.all
+    meals = MealFetcher.all
     meal = MealBuilder.build
 
     render 'index', locals: {meals: meals, meal: meal}
