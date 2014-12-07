@@ -12,7 +12,6 @@ input[type="text"], input[type="time"], input[type="date"] {
   border-bottom: 3px dotted #ccc;
   color: black;
   height: 44px;
-  margin-left: 12px;
   padding-left: 12px;
   outline: none;
   width: calc(100% - 24px);
@@ -41,4 +40,18 @@ input[type="text"], input[type="time"], input[type="date"] {
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
+
+  &.delete {
+    border-color: #ed6010;
+    color: #ed6010;
+  }
+}
+
+form.button_to, form.button_to div {
+  display: inline;
+}
+
+table td a {
+  color: #49bf9d;
+  text-decoration: none;
 }
