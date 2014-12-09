@@ -1,6 +1,16 @@
 class MealsController < ApplicationController
   def index
-    redirect_to(root_path)
+    meals = MealFetcher.all
+    meal = MealBuilder.build
+
+    render 'index', locals: {meals: meals, meal: meal}
+  end
+
+  def today
+    meals = MealFetcher.for_today
+    meal = MealBuilder.build
+
+    render 'index', locals: {meals: meals, meal: meal}
   end
 
   def create

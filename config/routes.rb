@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  root 'dashboard#index'
+  root 'meals#today'
+
+  resources :meals do
+    collection do
+      get :today
+    end
+  end
+
   get ':day/:month/:year' => 'days#show'
-  resources :meals
 end

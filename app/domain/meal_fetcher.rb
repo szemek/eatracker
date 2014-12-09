@@ -1,5 +1,9 @@
 class MealFetcher
   def self.all
+    Meal.order(Meal[:consumed_at].desc)
+  end
+
+  def self.for_today
     Meal.where(Meal[:consumed_at].gt(Date.current))
         .order(Meal[:consumed_at].desc)
   end
