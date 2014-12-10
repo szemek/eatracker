@@ -1,0 +1,26 @@
+#calculator {
+  input[type="number"] {
+    text-align: right;
+  }
+
+  input[type="number"] {
+    border: none;
+    border-bottom: 3px dotted #ccc;
+    color: black;
+    height: 44px;
+    margin-right: 12px;
+    outline: none;
+
+    &::-webkit-input-placeholder {
+      color: #ccc;
+    }
+
+    &:focus {
+      border-bottom: 3px dotted #49bf9d;
+    }
+
+    &[disabled] {
+      border-bottom: 3px solid black;
+    }
+  }
+}
