@@ -16,6 +16,7 @@ gem 'arel-helpers', '~> 2.0.1'
 gem 'haml-rails', '~> 0.6.0'
 gem 'pry-rails', '~> 0.3.2'
 gem 'quiet_assets', '~> 1.0.3'
+gem 'react-rails', '~> 0.12.0.0'
 gem 'thin', '~> 1.6.3'
 
 group :development, :test do
