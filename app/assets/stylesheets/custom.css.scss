@@ -25,6 +25,10 @@ input[type="text"], input[type="time"], input[type="date"] {
   }
 }
 
+input[type="time"] {
+  min-width: 90px;
+}
+
 .button {
   background-color: transparent;
   border-radius: 6px;
