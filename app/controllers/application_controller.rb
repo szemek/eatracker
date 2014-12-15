@@ -11,6 +11,11 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def current_admin_user
+  end
+
+  helper_method :current_admin_user
+
   private
 
   def auth

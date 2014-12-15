@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
+gem 'activeadmin', github: 'activeadmin'
 gem 'arel-helpers', '~> 2.0.1'
 gem 'haml-rails', '~> 0.6.0'
 gem 'pry-rails', '~> 0.3.2'
