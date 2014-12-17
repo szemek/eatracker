@@ -11,5 +11,7 @@ Rails.application.routes.draw do
   get ':day/:month/:year' => 'days#show'
 
   get 'calculator' => 'calculator#show'
+
   get 'weight' => 'weight#show'
+  post 'weight' => 'weight#create'
 end
