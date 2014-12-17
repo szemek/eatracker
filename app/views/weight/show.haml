@@ -1,0 +1,13 @@
+= form_for(:weight, url: weight_path) do |f|
+  %table
+    %thead
+      %tr
+        %th= f.text_field :value, placeholder: 'waga [kg]', required: true, autofocus: true
+        %th= f.date_field :measured_at, value: Time.now.strftime('%Y-%m-%d')
+        %th= f.submit 'Dodaj', class: 'button'
+    %tbody
+      - weights.each do |weight|
+        %tr
+          %td= weight.value
+          %td= weight.measured_at.strftime('%d/%m/%Y')
+          %td
