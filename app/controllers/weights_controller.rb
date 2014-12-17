@@ -1,4 +1,4 @@
-class WeightController < ApplicationController
+class WeightsController < ApplicationController
   def show
     weights = Weight.order(Weight[:measured_at].desc)
 
