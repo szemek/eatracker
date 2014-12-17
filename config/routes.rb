@@ -12,6 +12,5 @@ Rails.application.routes.draw do
 
   get 'calculator' => 'calculator#show'
 
-  get 'weight' => 'weight#show'
-  post 'weight' => 'weight#create'
+  resource :weight, only: [:show, :create]
 end
