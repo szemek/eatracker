@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+source 'https://rails-assets.org'
 
 ruby '2.1.5'
 
@@ -20,6 +21,8 @@ gem 'pry-rails', '~> 0.3.2'
 gem 'quiet_assets', '~> 1.0.3'
 gem 'react-rails', '~> 0.12.0.0'
 gem 'thin', '~> 1.6.3'
+
+gem 'rails-assets-chartist', '~> 0.5.0'
 
 group :development, :test do
   gem 'better_errors', '~> 2.0.0'
