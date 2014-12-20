@@ -8,9 +8,13 @@ Rails.application.routes.draw do
     end
   end
 
-  get ':day/:month/:year' => 'days#show'
-
   get 'calculator' => 'calculator#show'
 
   resource :weight, only: [:show, :create]
+
+  namespace :api do
+    get 'charts/weight'
+  end
+
+  get ':day/:month/:year' => 'days#show'
 end
