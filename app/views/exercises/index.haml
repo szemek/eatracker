@@ -1,0 +1,13 @@
+= form_for(:exercise, url: exercises_path) do |f|
+  %table
+    %thead
+      %tr
+        %th= f.text_field :name, placeholder: 'ćwiczenie', required: true, autofocus: true
+        %th= f.date_field :created_at, value: exercise.created_at.strftime('%Y-%m-%d')
+        %th= f.submit 'Dodaj', class: 'button'
+    %tbody
+      - exercises.each do |exercise|
+        %tr
+          %td= exercise.name
+          %td= exercise.created_at.strftime('%d/%m/%Y')
+          %td
