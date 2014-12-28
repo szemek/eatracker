@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :exercises
+
   get 'calculator' => 'calculator#show'
 
   resource :weight, only: [:show, :create]
