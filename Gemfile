@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 source 'https://rails-assets.org'
 
-ruby '2.1.5'
+ruby '2.2.0'
 
 gem 'rails', '4.1.8'
 gem 'pg'
@@ -16,6 +16,7 @@ gem 'spring',        group: :development
 gem 'active_model_serializers', '~> 0.9.2'
 gem 'activeadmin', github: 'activeadmin'
 gem 'arel-helpers', '~> 2.0.1'
+gem 'eventmachine', '~> 1.0.4'
 gem 'haml-rails', '~> 0.6.0'
 gem 'pry-rails', '~> 0.3.2'
 gem 'quiet_assets', '~> 1.0.3'
