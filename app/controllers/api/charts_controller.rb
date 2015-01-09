@@ -1,6 +1,6 @@
 class Api::ChartsController < Api::BaseController
   def weight
-    records = Weight.order(Weight[:measured_at].asc).limit(14)
+    records = Weight.order(Weight[:measured_at].desc).limit(14).reverse
 
     labels = records.map(&:measured_at).map { |date| date.strftime("%Y-%m-%d") }
     series = records.map(&:value).map(&:to_f)
