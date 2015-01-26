@@ -1,3 +1,7 @@
+.ct-chart
+
+= javascript_include_tag 'charts/weight'
+
 = form_for(:weight, url: weight_path) do |f|
   %table
     %thead
@@ -11,7 +15,3 @@
           %td= weight.value
           %td= weight.measured_at.strftime('%d/%m/%Y')
           %td
-
-.ct-chart
-
-= javascript_include_tag 'charts/weight'
