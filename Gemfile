@@ -16,6 +16,7 @@ gem 'spring',        group: :development
 gem 'active_model_serializers', '~> 0.9.2'
 gem 'activeadmin', github: 'activeadmin'
 gem 'arel-helpers', '~> 2.0.1'
+gem 'dotenv-rails', '~> 1.0.2'
 gem 'eventmachine', '~> 1.0.4'
 gem 'haml-rails', '~> 0.6.0'
 gem 'pry-rails', '~> 0.3.2'
