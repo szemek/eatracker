@@ -3,7 +3,7 @@
     - meals.each do |meal|
       %tr
         %td= link_to(meal.name, meal)
-        %td= meal.energy
+        %td= meal.size
         %td= meal.consumed_at.strftime('%H:%M')
         %td= meal.consumed_at.strftime('%d/%m/%Y')
         %td

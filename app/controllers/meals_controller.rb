@@ -34,6 +34,6 @@ class MealsController < ApplicationController
   private
 
   def meal_params
-    params.require(:meal).permit(:name, :energy, :consumed_at => [:date, :time])
+    params.require(:meal).permit(:name, :size, :consumed_at => [:date, :time])
   end
 end
