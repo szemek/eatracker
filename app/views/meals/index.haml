@@ -3,7 +3,7 @@
     %thead
       %tr
         %th= f.text_field :name, placeholder: 'posiłek', required: true, autofocus: true
-        %th= f.text_field :energy, placeholder: 'kalorie'
+        %th= f.text_field :size, placeholder: 'rozmiar'
         %th= f.time_field :consumed_at, name: 'meal[consumed_at][time]', value: meal.consumed_at.strftime('%H:%M')
         %th= f.date_field :consumed_at, name: 'meal[consumed_at][date]', value: meal.consumed_at.strftime('%Y-%m-%d')
         %th= f.submit 'Dodaj', class: 'button'
@@ -11,7 +11,7 @@
       - meals.each do |meal|
         %tr
           %td= link_to(meal.name, meal)
-          %td= meal.energy
+          %td= meal.size
           %td= meal.consumed_at.strftime('%H:%M')
           %td= meal.consumed_at.strftime('%d/%m/%Y')
           %td

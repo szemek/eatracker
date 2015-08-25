@@ -1,3 +1,3 @@
 ActiveAdmin.register Meal do
-  permit_params :name, :energy, :consumed_at
+  permit_params :name, :size, :consumed_at
 end

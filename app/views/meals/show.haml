@@ -1,13 +1,13 @@
 %table
   %thead
     %th posiłek
-    %th kalorie
+    %th rozmiar
     %th godzina
     %th dzień
   %tbody
     %tr
       %td= meal.name
-      %td= meal.energy
+      %td= meal.size
       %td= meal.consumed_at.strftime('%H:%M')
       %td= meal.consumed_at.strftime('%d/%m/%Y')
       %td
