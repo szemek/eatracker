@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   end
 
   resources :exercises
-  resources :notes
+  resources :notes, only: [:index, :create]
 
   get 'calculator' => 'calculator#show'
 
