@@ -1,0 +1,11 @@
+= form_for(:note, url: notes_path) do |f|
+  %table
+    %thead
+      %tr
+        %th= f.text_field :body, placeholder: 'treść', required: true, autofocus: true
+        %th= f.submit 'Dodaj', class: 'button'
+    %tbody
+      - notes.each do |note|
+        %tr
+          %td= link_to(note.body, note)
+          %td= note.created_at.strftime('%H:%M %d-%m-%Y')
