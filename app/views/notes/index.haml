@@ -7,5 +7,5 @@
     %tbody
       - notes.each do |note|
         %tr
-          %td= link_to(note.body, note)
+          %td= note.body
           %td= note.created_at.strftime('%H:%M %d-%m-%Y')
