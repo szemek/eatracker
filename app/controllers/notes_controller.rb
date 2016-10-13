@@ -1,6 +1,6 @@
 class NotesController < ApplicationController
   def index
-    notes = Note.all
+    notes = NoteFetcher.all
     note = Note.new
 
     render :index, locals: { notes: notes, note: note }
