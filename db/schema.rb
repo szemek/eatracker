@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20161012144957) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "active_admin_comments", force: true do |t|
+  create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
     t.text     "body"
     t.string   "resource_id",   null: false
@@ -31,25 +31,25 @@ ActiveRecord::Schema.define(version: 20161012144957) do
   add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace", using: :btree
   add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
 
-  create_table "exercises", force: true do |t|
+  create_table "exercises", force: :cascade do |t|
     t.string   "name",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "meals", force: true do |t|
+  create_table "meals", force: :cascade do |t|
     t.string   "name",        null: false
     t.datetime "consumed_at"
     t.string   "size"
   end
 
-  create_table "notes", force: true do |t|
+  create_table "notes", force: :cascade do |t|
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "weights", force: true do |t|
+  create_table "weights", force: :cascade do |t|
     t.decimal  "value"
     t.datetime "measured_at"
   end
